@@ -1,0 +1,85 @@
+const FALLBACK = {
+  "updated": "2026-09-03",
+  "lanes": [
+    {
+      "id": "now",
+      "label": "Now",
+      "hint": "Do these first",
+      "items": [
+        {"name": "App testing + TX proof", "owner": "Wade / Adam", "status": "active", "note": "Prove one clean Station 1 path: app state → notification → locker → order → real billing."},
+        {"name": "Legal + contact pages for app stores", "owner": "Adam / Wade", "status": "active", "note": "Terms, Privacy, and live website links Flywheel still needs for Apple/Google."},
+        {"name": "Core Prints merch catalog review", "owner": "Wade", "status": "active", "note": "T-shirts and promo catalog. Due Sep 3.", "link": "https://shopcoreprints.com/products?sort=PVRN"}
+      ]
+    },
+    {
+      "id": "week",
+      "label": "This week",
+      "hint": "By end of week",
+      "items": [
+        {"name": "Investor / member one-pager", "owner": "Adam + Hermes", "status": "planned", "note": "Positive, truthful weekly update from Fireflies, GQueues, and Tom’s Planner."},
+        {"name": "What-we’ve-done video", "owner": "Adam + Hermes", "status": "planned", "note": "Short video for team / members / investors. Script from the one-pager."},
+        {"name": "This activity board", "owner": "Hermes on Air", "status": "active", "note": "First working dashboard in this GitHub repo."}
+      ]
+    },
+    {
+      "id": "blocked",
+      "label": "Blocked",
+      "hint": "Needs a live proof pass",
+      "items": [
+        {"name": "Payment / billing truth", "owner": "App + Flywheel", "status": "blocked", "note": "“Confirm payment sent” is not the same as money actually moving."},
+        {"name": "Notifications by TX state", "owner": "Flywheel", "status": "blocked", "note": "Still not proven against real transaction states."},
+        {"name": "Seller setup", "owner": "Flywheel", "status": "blocked", "note": "Stuck at Seller Information. Refund-policy screen is in the way of listing tests."},
+        {"name": "Smiota ↔ order ↔ Stripe", "owner": "Wade / vendors", "status": "blocked", "note": "Locker/order/payment handoff is not fully proven live. Station 1 is the safe test surface."}
+      ]
+    },
+    {
+      "id": "systems",
+      "label": "Where work lives",
+      "hint": "Don’t copy everything everywhere",
+      "items": [
+        {"name": "GQueues", "owner": "Team", "status": "system", "note": "Who owns it, what is due, what is next."},
+        {"name": "Tom’s Planner", "owner": "Team", "status": "system", "note": "Sequence, milestones, vendor timing."},
+        {"name": "Obsidian vault", "owner": "Hermes", "status": "system", "note": "Evidence, blockers, decisions. Not the to-do list."},
+        {"name": "This GitHub board", "owner": "Hermes + team", "status": "system", "note": "Public-facing team picture of workflows in progress."}
+      ]
+    }
+  ]
+};
+
+function render(data) {
+  document.getElementById("updated").textContent = "Updated " + data.updated;
+  const board = document.getElementById("board");
+  board.innerHTML = "";
+  data.lanes.forEach((lane) => {
+    const col = document.createElement("section");
+    col.className = "lane";
+    col.innerHTML = `<h2>${lane.label}</h2><p class="hint">${lane.hint}</p>`;
+    lane.items.forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "item";
+      card.innerHTML = `
+        <h3>${item.name}</h3>
+        <div class="meta">
+          <span class="status ${item.status}">${item.status}</span>
+          <span class="owner">${item.owner}</span>
+        </div>
+        <p class="note">${item.note}</p>
+        ${item.link ? `<a href="${item.link}" target="_blank" rel="noopener">Open link</a>` : ""}
+      `;
+      col.appendChild(card);
+    });
+    board.appendChild(col);
+  });
+}
+
+async function loadBoard() {
+  try {
+    const res = await fetch("data/workflows.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("no json");
+    render(await res.json());
+  } catch (err) {
+    render(FALLBACK);
+  }
+}
+
+loadBoard();
