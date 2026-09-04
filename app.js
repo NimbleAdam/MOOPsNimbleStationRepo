@@ -39,8 +39,19 @@ const FALLBACK = {
   ]
 };
 
+let BOARD = FALLBACK;
+let FILTER = "all";
+
 function countBy(data, status) {
   return data.lanes.reduce((n, lane) => n + lane.items.filter((i) => i.status === status).length, 0);
+}
+
+function matches(item, lane, filter) {
+  if (filter === "all") return true;
+  if (filter === "now") return lane.id === "now";
+  if (filter === "blocked") return item.status === "blocked";
+  if (filter === "wade") return (item.owner || "").toLowerCase().includes("wade");
+  return true;
 }
 
 function render(data) {
@@ -79,6 +90,7 @@ function render(data) {
       <p class="hint">${lane.hint}</p>
     `;
     lane.items.forEach((item) => {
+      if (!matches(item, lane, FILTER)) return;
       const card = document.createElement("article");
       card.className = "item";
       card.innerHTML = `
@@ -94,17 +106,27 @@ function render(data) {
       `;
       col.appendChild(card);
     });
-    board.appendChild(col);
+    if (col.querySelector(".item")) board.appendChild(col);
   });
 }
+
+document.getElementById("filters").addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-filter]");
+  if (!btn) return;
+  FILTER = btn.getAttribute("data-filter");
+  document.querySelectorAll("#filters button").forEach((b) => b.classList.toggle("on", b === btn));
+  render(BOARD);
+});
 
 async function loadBoard() {
   try {
     const res = await fetch("data/workflows.json", { cache: "no-store" });
     if (!res.ok) throw new Error("no json");
-    render(await res.json());
+    BOARD = await res.json();
+    render(BOARD);
   } catch (err) {
-    render(FALLBACK);
+    BOARD = FALLBACK;
+    render(BOARD);
   }
 }
 

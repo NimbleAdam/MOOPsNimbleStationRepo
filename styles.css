@@ -98,6 +98,29 @@ h1 {
 .count-week { color: #8a6400; }
 .count-blocked { color: #c2410c; }
 
+.filters {
+  max-width: 1180px;
+  margin: 0 auto 8px;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filters button {
+  background: #ffffff;
+  color: var(--navy);
+  border: 1px solid #ffffff;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font: 700 13px "Avenir Next", "Segoe UI", sans-serif;
+  min-height: 44px;
+}
+.filters button.on {
+  background: var(--gold);
+  color: var(--navy-deep);
+  border-color: var(--gold);
+}
+
 .board {
   max-width: 1180px;
   margin: 0 auto;
