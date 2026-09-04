@@ -49,12 +49,12 @@ h1 {
 }
 .tag {
   margin: 2px 0 0;
-  color: var(--ice);
+  color: #ffffff;
   font-size: 13px;
 }
 .updated {
   margin: 0;
-  color: var(--ice-dim);
+  color: #ffffff;
   font-size: 12px;
 }
 
@@ -67,34 +67,36 @@ h1 {
   gap: 10px;
 }
 .pulse-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(201, 232, 242, 0.18);
-  color: #fff;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  color: var(--navy);
   border-radius: 14px;
   padding: 12px 14px;
 }
 .pulse-card.lead {
-  background: #fff;
+  background: #ffffff;
   color: var(--navy);
-  border-color: transparent;
 }
 .pulse-card .k {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 1;
   margin: 0 0 4px;
+  color: var(--navy);
+  font-weight: 700;
 }
 .pulse-card .v {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.25;
+  color: var(--navy);
 }
-.pulse-card.lead .v { font-size: 16px; font-weight: 600; }
-.count-now { color: var(--ice); }
-.count-week { color: var(--gold); }
-.count-blocked { color: var(--orange); }
+.pulse-card.lead .v { font-size: 16px; font-weight: 600; color: var(--navy); }
+.count-now { color: #0a3a5c; }
+.count-week { color: #8a6400; }
+.count-blocked { color: #c2410c; }
 
 .board {
   max-width: 1180px;
