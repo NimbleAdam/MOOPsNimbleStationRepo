@@ -4,12 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nimble Station — Activity Board</title>
+  <link rel="icon" href="assets/nimble-logo.png">
+  <link rel="apple-touch-icon" href="assets/nimble-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="top">
     <div class="brand">
-      <div class="mark">NS</div>
+      <img class="logo" src="assets/nimble-logo.png" alt="Nimble Station">
       <div>
         <h1>Nimble Station</h1>
         <p class="tag">Team activity board</p>
@@ -18,13 +20,15 @@
     <p class="updated" id="updated">Updated —</p>
   </header>
 
+  <section class="pulse" id="pulse"></section>
+
   <main id="board" class="board">
     <p class="loading">Loading board…</p>
   </main>
 
   <footer>
-    <p>Private team board. Do not put secrets, passwords, or personal emails here.</p>
-    <p>Source of truth split: GQueues = next actions · Tom’s Planner = sequence · Obsidian = evidence.</p>
+    <p>GQueues = next actions · Tom’s Planner = sequence · Obsidian = evidence · This page = the picture.</p>
+    <p>No secrets, passwords, or personal emails on this board.</p>
   </footer>
 
   <script src="app.js"></script>

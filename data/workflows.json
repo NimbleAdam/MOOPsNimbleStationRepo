@@ -1,7 +1,6 @@
 {
-  "updated": "2026-09-03",
-  "title": "Nimble Station — Activity Board",
-  "subtitle": "What is moving, what is blocked, what is next.",
+  "updated": "2026-09-04",
+  "headline": "Station 1 proof is still the main job.",
   "lanes": [
     {
       "id": "now",
@@ -12,19 +11,23 @@
           "name": "App testing + TX proof",
           "owner": "Wade / Adam",
           "status": "active",
-          "note": "Prove one clean Station 1 path: app state → notification → locker → order → real billing."
+          "note": "One clean Station 1 path: app state → notification → locker → order → real billing.",
+          "next": "Run the next Station 1 live pass and write down what actually happened."
         },
         {
-          "name": "Legal + contact pages for app stores",
+          "name": "Legal + contact pages",
           "owner": "Adam / Wade",
           "status": "active",
-          "note": "Terms, Privacy, and live website links Flywheel still needs for Apple/Google."
+          "note": "Terms, Privacy, and live website links for Apple/Google.",
+          "next": "Publish the pages and send Flywheel the live URLs."
         },
         {
-          "name": "Core Prints merch catalog review",
+          "name": "Core Prints merch catalog",
           "owner": "Wade",
           "status": "active",
-          "note": "T-shirts and promo catalog. Due Sep 3.",
+          "due": "Sep 3",
+          "note": "Review T-shirts and promo catalog.",
+          "next": "Pick what Nimble should sell and reply on the GQueues task.",
           "link": "https://shopcoreprints.com/products?sort=PVRN"
         }
       ]
@@ -32,25 +35,28 @@
     {
       "id": "week",
       "label": "This week",
-      "hint": "By end of week",
+      "hint": "By Friday",
       "items": [
         {
           "name": "Investor / member one-pager",
           "owner": "Adam + Hermes",
           "status": "planned",
-          "note": "Positive, truthful weekly update from Fireflies, GQueues, and Tom’s Planner."
+          "note": "Truthful weekly update from Fireflies, GQueues, and Tom’s Planner.",
+          "next": "Draft the one-pager, then sit with Wade."
         },
         {
           "name": "What-we’ve-done video",
           "owner": "Adam + Hermes",
           "status": "planned",
-          "note": "Short video for team / members / investors. Script from the one-pager."
+          "note": "Short video for team, members, and investors.",
+          "next": "Write the script from the one-pager. Keep it under 3 minutes."
         },
         {
           "name": "This activity board",
-          "owner": "Hermes on Air",
+          "owner": "Hermes",
           "status": "active",
-          "note": "First working dashboard in this GitHub repo."
+          "note": "Public team picture of work in progress.",
+          "next": "Keep this page honest. Don’t mark blocked items as done."
         }
       ]
     },
@@ -63,25 +69,29 @@
           "name": "Payment / billing truth",
           "owner": "App + Flywheel",
           "status": "blocked",
-          "note": "“Confirm payment sent” is not the same as money actually moving."
+          "note": "“Confirm payment sent” is not proof that money moved.",
+          "next": "Capture one real charge path on Station 1."
         },
         {
           "name": "Notifications by TX state",
           "owner": "Flywheel",
           "status": "blocked",
-          "note": "Still not proven against real transaction states."
+          "note": "Not yet proven against real transaction states.",
+          "next": "Log buyer + seller alerts for one green-path sale."
         },
         {
           "name": "Seller setup",
           "owner": "Flywheel",
           "status": "blocked",
-          "note": "Stuck at Seller Information. Refund-policy screen is in the way of listing tests."
+          "note": "Stuck at Seller Information / refund-policy screen.",
+          "next": "Screenshot the blocker and send Flywheel the exact screen."
         },
         {
           "name": "Smiota ↔ order ↔ Stripe",
           "owner": "Wade / vendors",
           "status": "blocked",
-          "note": "Locker/order/payment handoff is not fully proven live. Station 1 is the safe test surface."
+          "note": "Locker, order, and payment IDs are not fully tied together live.",
+          "next": "Use Station 1 only. Record locker ID, order ID, and Stripe ID on the same pass."
         }
       ]
     },
@@ -94,25 +104,29 @@
           "name": "GQueues",
           "owner": "Team",
           "status": "system",
-          "note": "Who owns it, what is due, what is next."
+          "note": "Who owns it, what is due, what is next.",
+          "next": "Put assignments here, not in chat."
         },
         {
           "name": "Tom’s Planner",
           "owner": "Team",
           "status": "system",
-          "note": "Sequence, milestones, vendor timing."
+          "note": "Sequence, milestones, vendor timing.",
+          "next": "Change dates only when a real dependency moved."
         },
         {
           "name": "Obsidian vault",
           "owner": "Hermes",
           "status": "system",
-          "note": "Evidence, blockers, decisions. Not the to-do list."
+          "note": "Evidence, blockers, decisions. Not the to-do list.",
+          "next": "File proof here after a test, not before."
         },
         {
           "name": "This GitHub board",
           "owner": "Hermes + team",
           "status": "system",
-          "note": "Public-facing team picture of workflows in progress."
+          "note": "The picture everyone can open on a phone.",
+          "next": "Update workflows.json when the truth changes."
         }
       ]
     }
