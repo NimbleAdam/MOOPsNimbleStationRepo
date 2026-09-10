@@ -1,0 +1,10 @@
+{
+  "status": "draft-for-attorney-review-not-operative",
+  "source_filename": "Nimble_Station_Terms_and_Privacy_Policy_2026-09-10.pdf",
+  "source_sha256": "dd9c5f3ccf1f59f59201f0b598e0fa2e6bd61d7d2c3eed89489aa948b91367ec",
+  "source_pages": 11,
+  "rendition_date": "2026-09-10",
+  "approval": "not established for this rendition",
+  "canonical_docx": "not found in targeted Downloads search; custody unverified",
+  "text_method": "pypdf page.extract_text(), HTML escaped; extraction control-character bullet markers normalized to U+2022, wording otherwise unchanged"
+}
