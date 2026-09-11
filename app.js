@@ -6,7 +6,7 @@ const FALLBACK = {
       "id": "now", "label": "Now", "hint": "Do these first",
       "items": [
         {"name": "App testing + TX proof", "owner": "Wade / Adam", "status": "active", "note": "One clean path: app → notify → locker → order → buyer/seller acknowledgment. Confirm station readiness before the pass. Acknowledgment is not Stripe.", "next": "Pick a ready station, run one live pass, and write role, exact wording, time, order, locker, and state changes."},
-        {"name": "Legal + listing pack", "owner": "Adam / Wade / Clayton", "status": "active", "note": "Clayton owns nimblestation.com. Sep 10 Terms/Privacy is a review draft on this board, not counsel approval and not the store URL.", "next": "Confirm approved public policy/support URLs before submission. Do not use the GitHub review link in the stores."},
+        {"name": "Legal + listing pack", "owner": "Adam / Wade / Clayton", "status": "active", "note": "Clayton owns nimblestation.com. Sep 10 Terms/Privacy is operative and attorney-reviewed. Readable copy is on this board. Store listing still needs Clayton’s public /privacy and /terms URLs.", "next": "Keep GitHub as the readable copy. Confirm nimblestation.com URLs with Clayton before App Store / Play fields."},
         {"name": "Core Prints merch catalog", "owner": "Wade", "status": "active", "note": "T-shirts and promo catalog review is still open. Old Sep 3 date is past — not a new deadline.", "next": "Pick what Nimble should sell and reply on the existing GQueues task.", "link": "https://shopcoreprints.com/products?sort=PVRN"}
       ]
     },
