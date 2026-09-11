@@ -1,39 +1,41 @@
 const FALLBACK = {
-  "updated": "2026-09-04",
-  "headline": "Station 1 proof is still the main job.",
+  "updated": "2026-09-11",
+  "headline": "One live TX proof is still the main job. Buyer/seller acknowledgment is not bank settlement.",
   "lanes": [
     {
       "id": "now", "label": "Now", "hint": "Do these first",
       "items": [
-        {"name": "App testing + TX proof", "owner": "Wade / Adam", "status": "active", "note": "One clean Station 1 path: app state → notification → locker → order → real billing.", "next": "Run the next Station 1 live pass and write down what actually happened."},
-        {"name": "Legal + contact pages", "owner": "Adam / Wade", "status": "active", "note": "Terms, Privacy, and live website links for Apple/Google.", "next": "Publish the pages and send Flywheel the live URLs."},
-        {"name": "Core Prints merch catalog", "owner": "Wade", "status": "active", "due": "Sep 3", "note": "Review T-shirts and promo catalog.", "next": "Pick what Nimble should sell and reply on the GQueues task.", "link": "https://shopcoreprints.com/products?sort=PVRN"}
+        {"name": "App testing + TX proof", "owner": "Wade / Adam", "status": "active", "note": "One clean path: app → notify → locker → order → buyer/seller acknowledgment. Confirm station readiness before the pass. Acknowledgment is not Stripe.", "next": "Pick a ready station, run one live pass, and write role, exact wording, time, order, locker, and state changes."},
+        {"name": "Legal + listing pack", "owner": "Adam / Wade / Clayton", "status": "active", "note": "Clayton owns nimblestation.com. Sep 10 Terms/Privacy is a review draft on this board, not counsel approval and not the store URL.", "next": "Confirm approved public policy/support URLs before submission. Do not use the GitHub review link in the stores."},
+        {"name": "Core Prints merch catalog", "owner": "Wade", "status": "active", "note": "T-shirts and promo catalog review is still open. Old Sep 3 date is past — not a new deadline.", "next": "Pick what Nimble should sell and reply on the existing GQueues task.", "link": "https://shopcoreprints.com/products?sort=PVRN"}
       ]
     },
     {
-      "id": "week", "label": "This week", "hint": "By Friday",
+      "id": "week", "label": "This week", "hint": "By late next week unless noted",
       "items": [
-        {"name": "Investor / member one-pager", "owner": "Adam + Hermes", "status": "planned", "note": "Truthful weekly update from Fireflies, GQueues, and Tom’s Planner.", "next": "Draft the one-pager, then sit with Wade."},
-        {"name": "What-we’ve-done video", "owner": "Adam + Hermes", "status": "planned", "note": "Short video for team, members, and investors.", "next": "Write the script from the one-pager. Keep it under 3 minutes."},
-        {"name": "This activity board", "owner": "Hermes", "status": "active", "note": "Public team picture of work in progress.", "next": "Keep this page honest. Don’t mark blocked items as done."}
+        {"name": "AOR / topics list with Clayton", "owner": "Adam / Clayton / Wade", "status": "planned", "note": "Wade asked Adam and Clayton for a shared list: own / lead-with-help / help-not-lead. Overlap is OK. Do not rush.", "next": "Adam drafts his side. Walk the list with Wade late next week."},
+        {"name": "Investor / member one-pager", "owner": "Adam + Hermes", "status": "planned", "note": "Truthful weekly update. Station 1 money-path first. $7,200 vested at six-QW is not cash.", "next": "Draft the one-pager from live evidence, then sit with Wade."},
+        {"name": "What-we’ve-done video", "owner": "Adam + Hermes", "status": "planned", "note": "Short video for team, members, and investors. Later add-on — not a substitute for TX proof.", "next": "Write the script from the one-pager. Keep it under 3 minutes."},
+        {"name": "This activity board", "owner": "Hermes", "status": "active", "note": "Public team picture. Not the Flywheel admin. Not Vercel.", "next": "Keep this page honest. Don’t mark blocked items as done."}
       ]
     },
     {
-      "id": "blocked", "label": "Blocked", "hint": "Needs a live proof pass",
+      "id": "blocked", "label": "Blocked", "hint": "Needs a live proof pass or an invite",
       "items": [
-        {"name": "Payment / billing truth", "owner": "App + Flywheel", "status": "blocked", "note": "“Confirm payment sent” is not proof that money moved.", "next": "Capture one real charge path on Station 1."},
+        {"name": "Payment acknowledgment wording", "owner": "App + Flywheel", "status": "blocked", "note": "“Confirm payment sent” is not bank settlement. Billing/Stripe only if a Nimble fee path is in scope.", "next": "Capture one acknowledgment-only pass: role, exact CTA, time, order, state. Mark billing N/A unless a fee path is proven."},
         {"name": "Notifications by TX state", "owner": "Flywheel", "status": "blocked", "note": "Not yet proven against real transaction states.", "next": "Log buyer + seller alerts for one green-path sale."},
-        {"name": "Seller setup", "owner": "Flywheel", "status": "blocked", "note": "Stuck at Seller Information / refund-policy screen.", "next": "Screenshot the blocker and send Flywheel the exact screen."},
-        {"name": "Smiota ↔ order ↔ Stripe", "owner": "Wade / vendors", "status": "blocked", "note": "Locker, order, and payment IDs are not fully tied together live.", "next": "Use Station 1 only. Record locker ID, order ID, and Stripe ID on the same pass."}
+        {"name": "Seller setup", "owner": "Flywheel", "status": "blocked", "note": "Stuck at Seller Information / refund-policy screen. Refund-policy options are not settled Nimble policy.", "next": "Screenshot the blocker and send Flywheel the exact screen."},
+        {"name": "Order ↔ locker ↔ acknowledgment", "owner": "Wade / Flywheel", "status": "blocked", "note": "Live IDs are not fully tied together. Stripe only if billing is in scope.", "next": "On one authorized pass, record order ID, locker/PoD event, and acknowledgments together."},
+        {"name": "Vercel admin dashboard access", "owner": "Wade / Flywheel", "status": "blocked", "note": "Project transferred to Nimble Station. Adam’s login cannot see it yet. Do not recreate the project.", "next": "Invite adam@nimblestation.com to the Nimble Station Vercel team, then Adam accepts."}
       ]
     },
     {
       "id": "systems", "label": "Where work lives", "hint": "Don’t copy everything everywhere",
       "items": [
-        {"name": "GQueues", "owner": "Team", "status": "system", "note": "Who owns it, what is due, what is next.", "next": "Put assignments here, not in chat."},
+        {"name": "GQueues", "owner": "Team", "status": "system", "note": "Next actions. As of Sep 7: tags, not assignments. Do not invent tags.", "next": "Put next actions here, not in chat. Wait for Wade’s office tag briefing."},
         {"name": "Tom’s Planner", "owner": "Team", "status": "system", "note": "Sequence, milestones, vendor timing.", "next": "Change dates only when a real dependency moved."},
         {"name": "Obsidian vault", "owner": "Hermes", "status": "system", "note": "Evidence, blockers, decisions. Not the to-do list.", "next": "File proof here after a test, not before."},
-        {"name": "This GitHub board", "owner": "Hermes + team", "status": "system", "note": "The picture everyone can open on a phone.", "next": "Update workflows.json when the truth changes."}
+        {"name": "This GitHub board", "owner": "Hermes + team", "status": "system", "note": "The picture everyone can open on a phone. Flywheel repos are private READ and are not this page.", "next": "Update workflows.json when the truth changes."}
       ]
     }
   ]
