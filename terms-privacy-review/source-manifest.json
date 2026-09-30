@@ -1,14 +1,13 @@
 {
-  "status": "operative-attorney-reviewed",
+  "status": "october-1-plain-language",
   "source_filename": "Nimble_Station_Terms_and_Privacy_Policy_2026-10-01.pdf",
-  "source_sha256": "4e0699916c47d65a3a6cf135fd65adb35f63e20dff6db286e3745518e2210b47",
-  "source_pages": 19,
+  "source_sha256": "1dcea47384e869b84b4bd0692513307d63e30326775aba4ec87f0e7943ab5269",
+  "source_pages": 13,
   "rendition_date": "2026-10-01",
   "effective": "2026-09-01",
   "last_updated": "2026-10-01",
-  "approval": "September 10 policy attorney-reviewed; Adam said counsel blessed the October 1 Settings-path edit and this copy is ready to publish",
-  "change": "Added Settings > Edit Profile and Settings > Delete My Account in Part I and Part II. Other wording unchanged.",
-  "text_method": "Same policy words in index.html and the Chrome print of that page",
+  "layout": "Official print layout: contents on page 1, appendix starts on its own page. No process notes in the document.",
+  "change": "Plain-language pass of the September 10 rules, plus Settings > Edit Profile and Settings > Delete My Account. Legal points kept.",
   "readable_url": "https://nimbleadam.github.io/MOOPsNimbleStationRepo/terms-privacy-review/",
   "store_url_note": "Not automatically the App Store / Play privacy URL. Clayton publishes nimblestation.com."
 }
