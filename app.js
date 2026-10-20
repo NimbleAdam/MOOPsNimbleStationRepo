@@ -1,6 +1,6 @@
 const FALLBACK = {
-  "updated": "2026-10-12",
-  "headline": "nimblestation.com is live with /terms and /privacy (Oct 8 versions). The app still needs one live transaction proof at a ready station.",
+  "updated": "2026-10-20",
+  "headline": "Pricing is live and legal pages are current. What's left before launch is one real transaction at a station someone confirms is working today, and a billing process that can survive it.",
   "lanes": [
     {
       "id": "now",
@@ -8,126 +8,120 @@ const FALLBACK = {
       "hint": "Do these first",
       "items": [
         {
-          "name": "App Store submission gate: legal URLs",
-          "owner": "Clayton / Wade / Adam",
-          "status": "active",
-          "note": "Clayton published nimblestation.com/terms and /privacy as separate pages on Oct 10 (Adam's Oct 8 text, word for word). He also sent proposed revisions marked “not in effect” (18+ only, Buyer Protection section, account deletion by email to privacy@, support = help@). /support is still 404.",
-          "next": "Wade reviews Clayton's redline and says which version is in effect. Then the Privacy Policy URL can go into the App Store / Play fields.",
-          "link": "https://www.nimblestation.com/privacy"
-        },
-        {
-          "name": "App testing + TX proof",
+          "name": "One live transaction, end to end",
           "owner": "Wade / Adam",
           "status": "active",
-          "note": "TestFlight seller dashboard was reviewed Oct 6. No live station pass has been logged yet. Acknowledgment is not Stripe.",
-          "next": "Confirm which station is ready (Station 1 is a historical preference, not a status). Run one live buyer/seller pass and record role, exact wording, time, order, locker, and state changes."
+          "note": "Nothing has been proven against a real station. Acknowledgment is not Stripe, and a screenshot of a button is not a completed sale. This is the single thing standing between the app and a credible launch.",
+          "next": "Wade or Nyarai confirms which station works today, with a timestamp. Then run one buyer/seller pass and write down the role, exact wording, time, order, locker, and every state change."
         },
         {
-          "name": "Meeting notes: Nimble's own bot",
-          "owner": "Adam + Hermes",
+          "name": "18+ confirmation at signup",
+          "owner": "Flywheel / Julieta",
           "status": "active",
-          "note": "Fireflies is retired; all 22 past transcripts are archived in the vault. The Nimble Notes bot (Workspace user neo@nimblestation.com) joins Meet, records, and names speakers. Solo join, chat disclosure, and leave are proven; full end-to-end run is not yet.",
-          "next": "Tuesday dry run with Adam on the call. If names come out right, invite neo@ to the Wed 1 PM App Dev meeting."
+          "note": "Terms and Privacy now say 18+ and the leftover minor-user passages are gone (updated Oct 19). The app still does not ask the user to confirm they are 18 or older.",
+          "next": "Flywheel adds an 18+ confirmation to signup, either a checkbox or a date of birth. A yes or no, plus a screenshot of the signup screen, closes it."
         },
         {
-          "name": "Franchise / host tri-fold",
+          "name": "Locker billing, before the first cycle",
           "owner": "Adam / Wade",
           "status": "active",
-          "note": "v3 has Wade's Oct 11 edits (built on trust, good stewards, skip the shipping, no investor tiers). Pricing on the sheet still shows the old $2 / 5¢; the website now lists locker-size pricing.",
-          "next": "Update the pricing panel to the website's tiers, then print a proof. A resident-facing version with the download incentive comes after."
+          "note": "Billing locker usage is manual today: pull transactions from Smiota, cross-index who did each one, build the charges in spreadsheets. It cannot be wrong and it will not scale. Stripe is signed off, but whoever processes the first charges captures the customer's payment details, so the choice is sticky.",
+          "next": "Confirm three facts: what a Smiota export contains, what CSB is, and the billing unit. Talk to Alex Marshall before the first cycle. Working notes are in the nimble-billing repo.",
+          "link": "https://github.com/NimbleAdam/nimble-billing"
+        },
+        {
+          "name": "App Store submission",
+          "owner": "Clayton / Wade / Adam",
+          "status": "active",
+          "note": "nimblestation.com/terms and /privacy are live (Oct 19 text, 18+ rule). /support still returns 404. Clayton's proposed revisions are marked not in effect.",
+          "next": "Wade says which legal version is in effect. Then the Privacy Policy URL goes into the App Store and Play fields. Give /support a real page or point the app at contact instead."
         }
       ]
     },
     {
       "id": "week",
       "label": "This week",
-      "hint": "Decisions and vendor work in motion",
+      "hint": "In motion, not blocking launch",
       "items": [
         {
-          "name": "Pricing policy",
-          "owner": "Wade",
+          "name": "Pricing: make the app match the site",
+          "owner": "Wade / Flywheel",
           "status": "planned",
-          "note": "Website now shows Small $1.99 / Medium $2.99 / Large $3.99 per use, first 2 hours included, then $0.10 / $0.15 / $0.20 per hour. Marketing copy says “subject to change.”",
-          "next": "Wade confirms this is the committed policy, not just the public claim, so the app, tri-fold, and FAQ all match.",
+          "note": "The site is live with Small $1.99 / Medium $2.99 / Large $3.99 per use, first 2 hours included, then $0.10 / $0.15 / $0.20 per hour. Sellers pay the flat fee only. Buyers pay nothing if they pick up within 2 hours. Copy says subject to change.",
+          "next": "Wade confirms this is the committed policy. Then the app and the tri-fold get updated to the same numbers, and the old $2 / 5¢ comes off the sheet.",
           "link": "https://www.nimblestation.com/pricing"
         },
         {
           "name": "Seller cancels order (Change Order 2)",
           "owner": "Flywheel",
           "status": "planned",
-          "note": "Wade approved CO-2 on Oct 2 and answered Flywheel's design questions Oct 5: whole-order cancel, buyer confirms refund within 3 days or opens a claim, two cancel reasons.",
-          "next": "Flywheel builds and invoices when done. Nothing needed from Nimble until a build lands in TestFlight."
+          "note": "Wade approved CO-2 on Oct 2: whole-order cancel, buyer confirms the refund within 3 days or opens a claim, two cancel reasons.",
+          "next": "Flywheel builds it and invoices when done. Nothing is needed from Nimble until a build lands in TestFlight."
         },
         {
-          "name": "Roles and responsibilities sheet",
-          "owner": "Wade / Adam / Clayton",
+          "name": "Franchise / host tri-fold",
+          "owner": "Adam / Wade",
           "status": "planned",
-          "note": "Wade's sheet is the temporary map. Agreed: Adam is first line and brings decisions back to Wade; billing and franchisee financial reporting move to a future office manager after stand-up; Clayton stays cybersecurity lead; helpline is shared.",
-          "next": "Wade finalizes the wording in the spreadsheet. Revisit when the office manager role exists."
+          "note": "v3 has Wade's Oct 11 wording edits. The pricing panel still shows the old $2 / 5¢.",
+          "next": "Replace the pricing panel with the website tiers, print one proof, and stop there. The resident-facing version waits."
+        },
+        {
+          "name": "Listing autopilot",
+          "owner": "Adam + Hermes",
+          "status": "planned",
+          "note": "The bot now speaks the real listing flow: a Supabase insert as the signed-in seller, with photos and a drop-off location. It refuses to publish unless the account is a mock-environment user, because a listing goes live the instant it is created.",
+          "next": "Create one mock seller account. Run a dry-run, review the payload, then one live publish against mock only. Never against production.",
+          "link": "https://github.com/NimbleAdam/nimble-lister"
         },
         {
           "name": "Merch (t-shirts, polos)",
           "owner": "Wade / Adam",
           "status": "planned",
-          "note": "Core Prints catalog review is still open; Adam has a vendor conversation scheduled.",
-          "next": "Pick the items and quantities Nimble will actually order.",
+          "note": "Core Prints catalog review is still open.",
+          "next": "Pick the items and quantities Nimble will actually order. No order until that list exists.",
           "link": "https://shopcoreprints.com/products?sort=PVRN"
-        },
-        {
-          "name": "This activity board",
-          "owner": "Hermes",
-          "status": "active",
-          "note": "Public team picture. Not the Flywheel admin. Not Vercel.",
-          "next": "Keep this page honest. Don't mark blocked items as done."
         }
       ]
     },
     {
       "id": "blocked",
       "label": "Blocked",
-      "hint": "Needs a live proof pass, a decision, or an invite",
+      "hint": "Each one names what unblocks it",
       "items": [
         {
-          "name": "Payment acknowledgment wording",
-          "owner": "App + Flywheel",
+          "name": "Which station works today",
+          "owner": "Wade / Nyarai",
           "status": "blocked",
-          "note": "“Confirm payment sent” is not bank settlement. Billing/Stripe only if a Nimble fee path is in scope.",
-          "next": "Capture one acknowledgment-only pass: role, exact CTA, time, order, state. Mark billing N/A unless a fee path is proven."
+          "note": "Old Station 2 and 3 errors are history, not status. No current readiness check is on record, and every other test waits on this.",
+          "next": "Wade or Nyarai names the working station and the time they checked it. That one line unblocks the transaction proof."
         },
         {
-          "name": "Notifications by TX state",
+          "name": "Notifications by transaction state",
           "owner": "Flywheel",
           "status": "blocked",
-          "note": "Wade sent updated notification messages Oct 7. Still not proven against real transaction states.",
-          "next": "Log buyer + seller alerts for one green-path sale, then yellow and orange."
+          "note": "Wade sent updated notification messages Oct 7. They have not been proven against a real transaction.",
+          "next": "On the live pass, log what the buyer and seller each actually receive. Then do the same for one yellow and one orange state."
         },
         {
-          "name": "Seller setup / refund-policy screen",
-          "owner": "Flywheel / Wade",
+          "name": "Seller refund-policy screen",
+          "owner": "Wade",
           "status": "blocked",
-          "note": "Historical stop at Seller Information. Refund-policy options shown there are not settled Nimble policy.",
-          "next": "Wade decides the refund-policy posture. Then retest the seller flow on the current build and screenshot anything that still stops."
+          "note": "Seller setup stops at Seller Information. The refund-policy options shown there are not settled Nimble policy, so retesting now would only re-prove the same stop.",
+          "next": "Wade decides the refund-policy posture. Then retest on the current build and screenshot whatever still stops."
         },
         {
-          "name": "Order ↔ locker ↔ acknowledgment",
+          "name": "Order, locker, and acknowledgment tied together",
           "owner": "Wade / Flywheel",
           "status": "blocked",
-          "note": "Live IDs are not fully tied together. Stripe only if billing is in scope.",
-          "next": "On one authorized pass, record order ID, locker/PoD event, and acknowledgments together."
+          "note": "The order ID, the locker event, and the payment acknowledgment are not recorded as one thing. Stripe only matters if a fee path is in scope.",
+          "next": "On the authorized pass, record the order ID, the locker event, and the acknowledgment in the same note."
         },
         {
           "name": "7-day branches: abandonment and no-drop-off",
           "owner": "Wade / Adam",
           "status": "blocked",
-          "note": "What happens to unsold or abandoned items, and to a sale where nothing is dropped off, is not yet observed in the app or the locker.",
-          "next": "Run one timed branch and log what buyer and seller actually see, then Wade sets the policy."
-        },
-        {
-          "name": "Station readiness",
-          "owner": "Wade / Nyarai",
-          "status": "blocked",
-          "note": "Old Station 2/3 errors are history, not status. No current readiness check is on record.",
-          "next": "Wade or Nyarai confirms which station works today, with a timestamp, before any test."
+          "note": "What happens to an unsold item, or to a sale where nothing is dropped off, has not been observed in the app or the locker.",
+          "next": "Run one timed branch and log what buyer and seller actually see. Wade sets the policy from that, not before it."
         }
       ]
     },
@@ -158,11 +152,11 @@ const FALLBACK = {
           "next": "File proof here after a test, not before."
         },
         {
-          "name": "This GitHub board",
+          "name": "This board",
           "owner": "Hermes + team",
           "status": "system",
-          "note": "The picture everyone can open on a phone. Flywheel repos are private and are not this page.",
-          "next": "Update workflows.json when the truth changes."
+          "note": "The picture everyone can open on a phone. The Flywheel repos are private and are not this page.",
+          "next": "Update workflows.json when the truth changes, and take off anything that is done."
         }
       ]
     }
