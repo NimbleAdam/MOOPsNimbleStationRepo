@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nimble Station — Execution Tracker</title>
+  <link rel="icon" href="../assets/nimble-logo.png">
+  <link rel="apple-touch-icon" href="../assets/nimble-logo.png">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .kind { font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 7px; border-radius: 10px; background: #e8f4fb; color: #0a3a5c; }
+    .kind.decision { background: #fde8de; color: #a33a10; }
+    .kind.doc { background: #fff3cc; color: #6b4e00; }
+    .kind.backlog { background: #eee; color: #444; }
+    .links a { display: inline-block; margin: 6px 10px 0 0; font-weight: 600; }
+    .crumbs { padding: 0 1rem; font-size: .9rem; }
+    .crumbs a { font-weight: 600; }
+    .source { padding: 0 1rem; font-size: .8rem; color: #41586b; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img class="logo" src="../assets/nimble-logo.png" alt="Nimble Station">
+      <div>
+        <h1>Nimble Station</h1>
+        <p class="tag">Execution tracker · decisions, drafts, queues</p>
+      </div>
+    </div>
+    <p class="updated" id="updated">Updated —</p>
+  </header>
+  <p class="crumbs"><a href="../">← Activity board</a></p>
+  <p class="source" id="source"></p>
+
+  <section class="pulse" id="pulse"></section>
+  <nav class="filters" id="filters" aria-label="Tracker filters">
+    <button type="button" data-filter="all" class="on">All</button>
+    <button type="button" data-filter="wade">Wade</button>
+    <button type="button" data-filter="adam">Adam</button>
+    <button type="button" data-filter="doc">Docs</button>
+    <button type="button" data-filter="decision">Decisions</button>
+  </nav>
+
+  <main id="board" class="board">
+    <p class="loading">Loading tracker…</p>
+  </main>
+
+  <footer>
+    <p>GQueues = the task · Google Docs = the draft · Tom’s Planner = the sequence · This page = where each one stands.</p>
+    <p>Dollar figures are Wade’s working numbers, not approved terms. Ticket numbers as spoken on calls; confirm against the tracker.</p>
+    <p>No secrets, passwords, or personal emails on this page.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
