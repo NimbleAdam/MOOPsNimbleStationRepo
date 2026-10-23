@@ -1,7 +1,7 @@
 const FALLBACK = {
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "source": "Adam–Wade session 22 Oct 2026 · Flywheel call 21 Oct · GQueues read 82→110 tasks · Drive/Gmail evidence sweep",
-  "headline": "Three weeks to a live app. Five decisions are Wade's. Ten first drafts are in Drive waiting for Adam's read.",
+  "headline": "Three weeks to a live app. Four decisions are Wade's (price list decided 10/23). Ten first drafts are in Drive waiting for Adam's read.",
   "lanes": [
     {
       "id": "decide",
@@ -12,10 +12,10 @@ const FALLBACK = {
           "id": "B1",
           "name": "Approve the per-use price list Nimble will charge at go-live",
           "kind": "decision",
-          "status": "blocked",
+          "status": "done",
           "owner": "Wade",
-          "note": "Two price structures are in circulation: the pricing sheet ($1.99/$2.99/$3.99, 2 h free; its own table says 6 h) and the tri-fold ($2 + 5¢/h). The live site shows the sheet.",
-          "next": "Wade names one list in writing. Adam updates the tri-fold and the checklist.",
+          "note": "DECIDED 2026-10-23 11:02 by Wade (GQueues comment): the website pricing page is the approved list. $1.99/$2.99/$3.99 per use, 2 h included, then $0.10/$0.15/$0.20 per hour. Task completed and archived by Wade.",
+          "next": "Adam updates the tri-fold and the Ready-to-Charge checklist to match.",
           "gq": "https://app.gqueues.com/main/task/active/4656852516077568-4921618996461568",
           "doc": null
         },
@@ -337,7 +337,6 @@ const FALLBACK = {
     }
   ]
 };
-
 let BOARD = FALLBACK;
 let FILTER = "all";
 
