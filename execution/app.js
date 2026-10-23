@@ -1,7 +1,7 @@
 const FALLBACK = {
   "updated": "2026-10-23",
   "source": "Adam–Wade session 22 Oct 2026 · Flywheel call 21 Oct · GQueues read 82→110 tasks · Drive/Gmail evidence sweep",
-  "headline": "Three weeks to a live app. Four decisions are Wade's (price list decided 10/23). Ten first drafts are in Drive waiting for Adam's read.",
+  "headline": "Three weeks to a live app. Three decisions are Wade's (price list and ticket system decided 10/23). Ten first drafts are in Drive waiting for Adam's read.",
   "lanes": [
     {
       "id": "decide",
@@ -34,10 +34,10 @@ const FALLBACK = {
           "id": "L2",
           "name": "Ticket system for go-live. GQueues queue with its own email address, or something else",
           "kind": "decision",
-          "status": "blocked",
+          "status": "done",
           "owner": "Wade",
-          "note": "Wade's own note proposes a GQueues queue with its own email as the ticket system. Nothing else evaluated.",
-          "next": "Pick it for 90 days or name an alternative. The Support SOP's intake section is written either way.",
+          "note": "DECIDED 2026-10-23 15:33 by Wade (GQueues comment): tickets run in admin.nimblestation.com; help@nimblestation.com (alias of admin@) is the intake address; separate help@ user only when volume warrants.",
+          "next": "Adam: triage flowchart and intake instructions point to admin dashboard + help@.",
           "gq": "https://app.gqueues.com/main/task/active/4656852516077568-6548518248448000",
           "doc": null
         },
